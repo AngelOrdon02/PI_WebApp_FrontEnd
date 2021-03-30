@@ -8,12 +8,18 @@ import { HomeComponent } from './components/home/home.component';
 
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { LoginComponent } from './components/login/login.component';
+import { RegisterComponent } from './components/register/register.component';
+import { RecoveryComponent } from './components/recovery/recovery.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ProfileComponent,
-    HomeComponent
+    HomeComponent,
+    LoginComponent,
+    RegisterComponent,
+    RecoveryComponent
   ],
   imports: [
     BrowserModule,

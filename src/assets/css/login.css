@@ -1,4 +1,4 @@
-body {
+#auth-style {
     background-color: #DADADA;
     /* The image used */
     /* background-image: url("https://cdn.pixabay.com/photo/2018/09/03/23/56/sea-3652697_960_720.jpg"); */
@@ -13,7 +13,7 @@ body {
     background-size: cover;
 }
 
-body>.grid {
+#auth-style>.grid {
     height: 100%;
 }
 

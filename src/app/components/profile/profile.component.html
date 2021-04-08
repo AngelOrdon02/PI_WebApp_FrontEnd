@@ -15,6 +15,10 @@
                             <div class="eight wide column">
                                 <h3>Mis datos:</h3>
                                 <form class="ui form">
+                                    <div class="field">
+                                        <label>Carné</label>
+                                        <input type="text" id="carne" name="carne" placeholder="Carné">
+                                    </div>
                                     <div class="field" hidden>
                                         <label>Id</label>
                                         <input type="text" id="id_user" name="id_user" placeholder="Id" disabled>
@@ -26,22 +30,6 @@
                                     <div class="field">
                                         <label>Apellido</label>
                                         <input type="text" id="lastname" name="lastname" placeholder="Apellido">
-                                    </div>
-                                    <div class="field">
-                                        <label>Nombre de usuario</label>
-                                        <input type="text" id="username" name="username" placeholder="Nombre de usuario">
-                                    </div>
-                                    <div class="field">
-                                        <label>Contraseña</label>
-                                        <input type="password" id="password" name="password" placeholder="Contraseña">
-                                    </div>
-                                    <div class="field">
-                                        <label>Confirmar contraseña</label>
-                                        <input type="password" id="confirm_password" name="confirm_password" placeholder="Confirmar contraseña">
-                                    </div>
-                                    <div class="field" hidden>
-                                        <label>Tipo de usuario</label>
-                                        <input type="text" id="user_type" name="user_type" placeholder="Tipo de usuario" disabled>
                                     </div>
                                     <div class="position_right">
                                         <button class="large ui teal button" type="button" onclick="edit()">Editar</button>

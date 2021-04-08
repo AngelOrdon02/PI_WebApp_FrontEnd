@@ -11,9 +11,13 @@ import { HttpClientModule } from '@angular/common/http';
 import { LoginComponent } from './components/login/login.component';
 import { RegisterComponent } from './components/register/register.component';
 import { RecoveryComponent } from './components/recovery/recovery.component';
-import { LandingComponent } from './components/landing/landing.component';
+//import { LandingComponent } from './components/landing/landing.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { HomepageComponent } from './components/homepage/homepage.component';
+import { NvbarhomepageComponent } from './components/nvbarhomepage/nvbarhomepage.component';
+import { CourseComponent } from './components/course/course.component';
+
 
 @NgModule({
   declarations: [
@@ -23,9 +27,14 @@ import { FooterComponent } from './components/footer/footer.component';
     LoginComponent,
     RegisterComponent,
     RecoveryComponent,
-    LandingComponent,
+    //LandingComponent,
     NavbarComponent,
-    FooterComponent
+    FooterComponent,
+    HomepageComponent,
+    NvbarhomepageComponent,
+    CourseComponent,
+  
+ 
   ],
   imports: [
     BrowserModule,

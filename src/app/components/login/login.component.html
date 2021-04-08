@@ -11,21 +11,21 @@
                 Login
             </div>
         </h2>
-        <form class="ui large form" (ngSubmit)="login()">
+        <form class="ui large form">
             <div class="ui stacked segment">
                 <div class="field">
                     <div class="ui left icon input">
                         <i class="user icon"></i>
-                        <input type="text" name="username" id="username" placeholder="Nombre de usuario">
+                        <input type="text" name="correo" id="correo" [(ngModel)]="user.Correo" placeholder="Correo" required>
                     </div>
                 </div>
                 <div class="field">
                     <div class="ui left icon input">
                         <i class="lock icon"></i>
-                        <input type="password" name="password" id="password" placeholder="Contraseña">
+                        <input type="password" name="password" id="password" [(ngModel)]="user.Password" placeholder="Contraseña" required>
                     </div>
                 </div>
-                <div class="ui fluid large teal button" type="submit">Login</div>
+                <div class="ui fluid large teal button" (click)="login()">Login</div>
             </div>
 
             <div class="ui error message"></div>

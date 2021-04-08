@@ -12,7 +12,7 @@ import { UserService } from 'src/app/services/user.service';
 export class LoginComponent implements OnInit {
 
   public user: User;
-  public status:string | undefined;
+  public status: string | undefined;
   public identity: any;
   public token: any;
 
@@ -21,21 +21,21 @@ export class LoginComponent implements OnInit {
     private _router: Router,
     private _userService: UserService
 
-  ) { 
+  ) {
     this.user = new User("", "", "", "", "", "");
   }
 
   ngOnInit(): void {
   }
 
-  onSubmit(){
+  onSubmit() {
     this._userService.singin(this.user).subscribe(
       response => {
         this.identity = response.user;
         console.log(this.identity);
-        if(!this.identity){
+        if (!this.identity) {
           this.status = 'error';
-        } else{
+        } else {
 
           // PERSISTIR DATOS DEL USUARIO
           sessionStorage.setItem('identity', JSON.stringify(this.identity));
@@ -45,8 +45,13 @@ export class LoginComponent implements OnInit {
     );
   }
 
-  login(){
-    this._router.navigate(['/home']);
+  login() {
+
+    console.log("login");
+    console.log("Correo: " + this.user.Correo);
+    console.log("Password: " + this.user.Password);
+    //this._router.navigate(['/home']);
+
   }
 
 }

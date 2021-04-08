@@ -6,7 +6,7 @@
     <div class="column">
         <h2 class="ui teal image header">
             <img src="assets/img/PIWEB3.png"
-                class="image" onclick="principal()">
+                class="image" (click)="principal()">
             <div class="content">
                 Recuperar contraseña
             </div>
@@ -16,12 +16,12 @@
                 <div class="field">
                     <div class="ui left icon input">
                         <i class="user icon"></i>
-                        <input type="text" id="username" name="username" placeholder="Nombre de usuario">
+                        <input type="text" id="carne" [(ngModel)]="user.Carne" name="carne" placeholder="Carné">
                     </div>
                 </div>
-                <div class="ui fluid large teal button" onclick="recover()">Recuperar</div>
+                <div class="ui fluid large teal button" (click)="recover()">Recuperar</div>
                 <p></p>
-                <div class="ui fluid large teal button" routerLink="/homepage">Menu principal</div>
+                <div class="ui medium blue button" (click)="goBack()">Regresar</div>
             </div>
 
             <div class="ui error message"></div>

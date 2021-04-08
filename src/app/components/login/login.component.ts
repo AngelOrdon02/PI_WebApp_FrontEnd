@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Router, ActivatedRoute, Params } from '@angular/router';
+import { Location } from '@angular/common';
+import swal from 'sweetalert2';
+
 import { User } from 'src/app/models/user.model';
 import { UserService } from 'src/app/services/user.service';
 
@@ -19,6 +22,7 @@ export class LoginComponent implements OnInit {
   constructor(
     private _route: ActivatedRoute,
     private _router: Router,
+    private _location: Location,
     private _userService: UserService
 
   ) {
@@ -50,8 +54,22 @@ export class LoginComponent implements OnInit {
     console.log("login");
     console.log("Correo: " + this.user.Correo);
     console.log("Password: " + this.user.Password);
-    //this._router.navigate(['/home']);
 
+    swal.fire({
+      icon: 'success',
+      title: '¡Bienvenido!'
+    });
+
+    this._router.navigate(['/home']);
+
+  }
+
+  principal() {
+    this._router.navigate(['/homepage']);
+  }
+
+  goBack(){
+    this._location.back();
   }
 
 }
